@@ -1,0 +1,21 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "name": "dummy",
+            "description" : "Lorem ipsum.",
+            "price": 0
+        },
+        {
+            "id": 1,
+            "name": "Fiber 50",
+            "description" : "Lorem ipsum.",
+            "price": 11.50
+        },
+        {   "id": 2,
+            "name": "Fiber 50 Duble Play",
+            "description": "Lorem ipsum.",
+            "price": 14.00
+        }
+    ]
+}
