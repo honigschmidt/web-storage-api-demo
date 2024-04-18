@@ -1,0 +1,1 @@
+Example of using the browser local storage for a webshop shopping cart. Check screenshot for details.

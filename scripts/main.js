@@ -13,7 +13,7 @@ function main() {
     async function showProducts() {
         const productRoot = document.querySelector("#store_container");
         const productList = await downloadProductList();
-        var uid = 0;
+        var elementID = 0;
         if (typeof productList == "undefined") {
             const errorMessage = document.createTextNode("Product list not found.");
             const messageNode = document.createElement("div");
@@ -23,7 +23,7 @@ function main() {
             productList.forEach((product) => {
                 let productNode = document.createElement("div");
                 productNode.className = "productnode";
-                productNode.id = `card_${uid}`;
+                productNode.id = `card_${elementID}`;
                 for (let [key, value] of Object.entries(product)) {
                     let attributeNode = document.createElement("div");
                     attributeNode.appendChild(document.createTextNode(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`));
@@ -33,7 +33,7 @@ function main() {
                 let addButton = document.createElement("button");
                 addButton.className = "addbutton";
                 addButton.textContent = "Add to cart";
-                addButton.id = `addbtn_${uid}`
+                addButton.id = `addbtn_${elementID}`
                 addButton.addEventListener("click", (evt) => {
                     let buttonID = evt.target.id;
                     let productID = Number(buttonID.replace("addbtn_", ""));
@@ -42,7 +42,7 @@ function main() {
                 buttonNode.appendChild(addButton);
                 productNode.appendChild(buttonNode);
                 productRoot.appendChild(productNode);
-                uid++;
+                elementID++;
             });
         }
     }
@@ -58,7 +58,7 @@ function main() {
             const emptyMessage = document.createTextNode("Cart is empty.");
             cartRoot.appendChild(emptyMessage);
         } else {
-            let uid = 0;
+            let elementID = 0;
             cart.push(JSON.parse(localStorage.getItem("cart")));
             cart[0].forEach((cartItem) => {
                 let cartItemNode = document.createElement("div");
@@ -82,7 +82,7 @@ function main() {
                 let removeButton = document.createElement("button");
                 removeButton.className = "removebutton";
                 removeButton.textContent = "Delete from cart"
-                removeButton.id = `delbtn_${uid}`;
+                removeButton.id = `delbtn_${elementID}`;
                 removeButton.addEventListener("click", (evt) => {
                     let buttonID = evt.target.id;
                     let cartItemID = Number(buttonID.replace("delbtn_", ""));
@@ -91,7 +91,7 @@ function main() {
                 buttonNode.appendChild(removeButton);
                 cartItemNode.appendChild(buttonNode);
                 cartRoot.appendChild(cartItemNode);
-                uid++;
+                elementID++;
         });
         }
     }
