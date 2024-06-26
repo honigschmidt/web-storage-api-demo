@@ -1,12 +1,16 @@
 {
   "name": "webstorageapidemo",
   "version": "1.0.0",
-  "description": "Example of using the browser local storage for a webshop shopping cart. Check screenshot for details.",
+  "description": "Example of using the browser local storage for a webshop shopping cart. Start with 'node index.js', then navigate to localhost:8080 (Node.js is required). Also check screenshot for details.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/honigschmidt/web-storage-api-demo.git"
+  },
+  "author": "coffeemonster",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"

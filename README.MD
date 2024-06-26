@@ -1,1 +1,1 @@
-Example of using the browser local storage for a webshop shopping cart. Check screenshot for details.
+Example of using the browser local storage for a webshop shopping cart. Start with 'node index.js', then navigate to localhost:8080 (Node.js is required). Also check screenshot for details.
